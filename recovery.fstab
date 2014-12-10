@@ -1,0 +1,22 @@
+# mount point	fstype    device    	[device2]
+
+# Xiaomi Redmi Note (WCDMA)
+
+#/system               ext4        /dev/block/mmcblk0p5
+#/data                 ext4        /dev/block/mmcblk0p7
+#/cache                ext4        /dev/block/mmcblk0p6
+#/protect_f            ext4        /dev/block/mmcblk0p2
+#/protect_s            ext4        /dev/block/mmcblk0p3
+#/sdcard               vfat        /dev/block/mmcblk1
+#/external_sd          vfat        /dev/block/mmcblk1  /dev/block/mmcblk1p1
+
+#<src>           <mnt_point>         <type>    <mnt_flags and options>                 <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+/emmc@android     /system             ext4      ro,noatime                              wait
+/emmc@cache       /cache              ext4      noatime,nosuid,nodev,noauto_da_alloc    wait
+/emmc@usrdata     /data               ext4      noatime,nosuid,nodev,noauto_da_alloc    wait,encryptable=footer
+/emmc@protect_f   /protect_f          ext4      noatime,nosuid,nodev,noauto_da_alloc    wait,check
+/emmc@protect_s   /protect_s          ext4      noatime,nosuid,nodev,noauto_da_alloc    wait,check
+
