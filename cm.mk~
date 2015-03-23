@@ -1,18 +1,19 @@
+# Inherit some common CM stuff
 ## Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := lcsh92_wet_jb9
+PRODUCT_RELEASE_NAME := mt6592
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/xiaomi/lcsh92_wet_jb9/device_lcsh92_wet_jb9.mk)
+$(call inherit-product, device/xiaomi/icsh92_wet_jb9/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := lcsh92_wet_jb9
-PRODUCT_NAME := cm_lcsh92_wet_jb9
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := lcsh92_wet_jb9
-PRODUCT_MANUFACTURER := alps
+PRODUCT_DEVICE := mt6592
+PRODUCT_NAME := cm_mt6592
+PRODUCT_BRAND := mediatek
+PRODUCT_MODEL := mt6592
+PRODUCT_MANUFACTURER := mediatek
