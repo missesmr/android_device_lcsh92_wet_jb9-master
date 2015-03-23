@@ -15,4 +15,4 @@ PRODUCT_DEVICE := lcsh92_wet_jb9
 PRODUCT_NAME := cm_lcsh92_wet_jb9
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := lcsh92_wet_jb9
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MANUFACTURER := alps

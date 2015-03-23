@@ -33,8 +33,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800 # /dev/block/mmcblk0p5
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 6453985280 # /dev/block/mmcblk0p7
 BOARD_FLASH_BLOCK_SIZE := 512
 
-BOARD_RIL_CLASS := ../../../device/xiaomi/icsh92_wet_jb9/ril/
-
 # eMMC support
 ifeq ($(MTK_EMMC_SUPPORT),yes)
 TARGET_USERIMAGES_USE_EXT4 := true
